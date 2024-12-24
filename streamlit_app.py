@@ -18,12 +18,12 @@ def main():
     """
     st.markdown(hide_st_style, unsafe_allow_html=True)
 
-    # Pobranie parametrów z URL
-    query_params = st.experimental_get_query_params()
+    # Pobranie parametrów z URL używając nowej metody
+    query_params = st.query_params
     
     # Wyświetlenie parametrów
     for key, value in query_params.items():
-        st.write(f"{key}: {value[0]}")
+        st.write(f"{key}: {value}")
 
 if __name__ == "__main__":
     main()
